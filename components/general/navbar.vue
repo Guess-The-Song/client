@@ -3,6 +3,10 @@ import { useUserStore } from "@/stores/user";
 import { useLobbyStore } from "@/stores/lobby";
 import cryptoRandomString from "crypto-random-string";
 
+const config = useRuntimeConfig();
+const clientid = config.public.clientID;
+const redirecturi = config.public.redirectURI;
+
 const userStore = useUserStore();
 const lobbyStore = useLobbyStore();
 
@@ -30,8 +34,8 @@ const isOpenLogin = ref(false);
 const isOpenDeleteAccount = ref(false);
 
 function handleSpotifyLogin() {
-  const CLIENT_ID = "5b562fe7d96648f9ab6d2c72fbb7a06a";
-  const REDIRECT_URI = "https://gts.thaemisch.com/auth";
+  const CLIENT_ID = clientid as string;
+  const REDIRECT_URI = redirecturi as string;
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const SCOPES = [
     "streaming",

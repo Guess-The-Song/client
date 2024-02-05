@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      clientID: "", // NUXT_PUBLIC_CLIENT_ID
+      redirectURI: "", // NUXT_PUBLIC_REDIRECT_URI
+      serverURL: "", // NUXT_PUBLIC_SERVER_URL
+    },
+  },
   app: {
     head: {
       title: "Guess The Song",
@@ -10,7 +17,7 @@ export default defineNuxtConfig({
         },
       ],
     },
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: "page", mode: "out-in" },
   },
   colorMode: {
     preference: "dark",
