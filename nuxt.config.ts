@@ -2,9 +2,9 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      clientID: "", // NUXT_PUBLIC_CLIENT_ID
-      redirectURI: "", // NUXT_PUBLIC_REDIRECT_URI
-      serverURL: "", // NUXT_PUBLIC_SERVER_URL
+      clientID: process.env.NUXT_PUBLIC_CLIENT_ID, // NUXT_PUBLIC_CLIENT_ID
+      redirectURI: process.env.NUXT_PUBLIC_REDIRECT_URI, // NUXT_PUBLIC_REDIRECT_URI
+      serverURL: process.env.NUXT_PUBLIC_SERVER_URL, // NUXT_PUBLIC_SERVER_URL
     },
   },
   app: {
