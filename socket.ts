@@ -1,7 +1,7 @@
 import { reactive } from "vue";
 import { io } from "socket.io-client";
 
-const config = useRuntimeConfig();
+const config = useNuxtApp().$config;
 const server = config.serverUrl as string;
 
 export const state = reactive({

@@ -3,7 +3,7 @@ import { useUserStore } from "@/stores/user";
 import { useLobbyStore } from "@/stores/lobby";
 import cryptoRandomString from "crypto-random-string";
 
-const config = useRuntimeConfig()
+const config = useNuxtApp().$config
 const clientid = config.clientId;
 const redirecturi = config.redirectUri;
 
