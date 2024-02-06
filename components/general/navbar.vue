@@ -3,10 +3,7 @@ import { useUserStore } from "@/stores/user";
 import { useLobbyStore } from "@/stores/lobby";
 import cryptoRandomString from "crypto-random-string";
 
-const appConfig = useAppConfig();
-const clientid = appConfig.clientId;
-const redirecturi = appConfig.redirectUri;
-console.log(clientid, redirecturi);
+import config from "@/assets/config.json";
 
 const userStore = useUserStore();
 const lobbyStore = useLobbyStore();
@@ -35,8 +32,8 @@ const isOpenLogin = ref(false);
 const isOpenDeleteAccount = ref(false);
 
 function handleSpotifyLogin() {
-  const CLIENT_ID = clientid;
-  const REDIRECT_URI = redirecturi;
+  const CLIENT_ID = config.clientId;
+  const REDIRECT_URI = config.redirectUrl;
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const SCOPES = [
     "streaming",
