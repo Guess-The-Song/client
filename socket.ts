@@ -1,8 +1,8 @@
 import { reactive } from "vue";
 import { io } from "socket.io-client";
-setTimeout(() => {}, 1000);
-const config = useRuntimeConfig();
-const server = config.serverUrl as string;
+
+const appConfig = useAppConfig();
+const server = appConfig.serverUrl as string;
 
 export const state = reactive({
   connected: false,

@@ -3,9 +3,9 @@ import { useUserStore } from "@/stores/user";
 import { useLobbyStore } from "@/stores/lobby";
 import cryptoRandomString from "crypto-random-string";
 
-const config = useRuntimeConfig()
-const clientid = config.clientId;
-const redirecturi = config.redirectUri;
+const appConfig = useAppConfig();
+const clientid = appConfig.clientId;
+const redirecturi = appConfig.redirectUri;
 
 const userStore = useUserStore();
 const lobbyStore = useLobbyStore();
