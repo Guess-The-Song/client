@@ -1,7 +1,7 @@
 import { reactive } from "vue";
 import { io } from "socket.io-client";
 
-const server = process.env.SERVER_URL || "http://localhost:3000";
+const server = process.env.SERVER_URL as string;
 
 export const state = reactive({
   connected: false,
