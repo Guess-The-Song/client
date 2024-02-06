@@ -3,8 +3,9 @@ import { useUserStore } from "@/stores/user";
 import { useLobbyStore } from "@/stores/lobby";
 import cryptoRandomString from "crypto-random-string";
 
-const clientid = process.env.CLIENT_ID;
-const redirecturi = process.env.REDIRECT_URI;
+const config = useRuntimeConfig()
+const clientid = config.clientId;
+const redirecturi = config.redirectUri;
 
 const userStore = useUserStore();
 const lobbyStore = useLobbyStore();

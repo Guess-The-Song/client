@@ -1,7 +1,8 @@
 import { reactive } from "vue";
 import { io } from "socket.io-client";
 
-const server = process.env.SERVER_URL as string;
+const config = useRuntimeConfig();
+const server = config.serverUrl as string;
 
 export const state = reactive({
   connected: false,
