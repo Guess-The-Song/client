@@ -6,6 +6,7 @@ import cryptoRandomString from "crypto-random-string";
 const appConfig = useAppConfig();
 const clientid = appConfig.clientId;
 const redirecturi = appConfig.redirectUri;
+console.log(clientid, redirecturi);
 
 const userStore = useUserStore();
 const lobbyStore = useLobbyStore();
