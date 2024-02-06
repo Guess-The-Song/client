@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as s,a as l}from"./entry.ZZnsooxh.js";const o={},c={class:"flex flex-col items-center justify-evenly px-4 w-full h-full relative overflow-x-hidden"},n=l("h1",null,"will be implemented later",-1),r=[n];function a(_,f){return s(),t("div",c,r)}const d=e(o,[["render",a]]);export{d as default};
