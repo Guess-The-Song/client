@@ -2,13 +2,11 @@ import { reactive } from "vue";
 import { io } from "socket.io-client";
 import config from "@/assets/config.json";
 
-const server = config.serverUrl;
-console.log("server", server);
 export const state = reactive({
   connected: false,
 });
 
-export const socket = io(server);
+export const socket = io(config.serverUrl);
 
 socket.on("connect", () => {
   console.log("CONNECTED SOCKET");
