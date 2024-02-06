@@ -1,9 +1,9 @@
 import { reactive } from "vue";
 import { io } from "socket.io-client";
-import config from "@/assets/config.json"
+import config from "@/assets/config.json";
 
 const server = config.serverUrl;
-
+console.log("server", server);
 export const state = reactive({
   connected: false,
 });
